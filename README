@@ -14,6 +14,9 @@ distribution; here are the files:
 		place this file as /etc/logwatch/scripts/services/postgresql
 		and make it executable.
 
+Prerequisite: if you are using stderr as PostgreSQL log_destination, you must at
+least set log_line_prefix = '%t ' in the postgresql.conf file.
+
 You can test the logwatch output by using the following command:
 
 	/usr/sbin/logwatch --detail Med --service postgresql --range Today
