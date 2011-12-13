@@ -1,0 +1,23 @@
+Logwatch configuration files and script for PostgreSQL
+
+Configuration and script for PostgreSQL is missing in the default Logwatch
+distribution; here are the files:
+
+    logfiles_postgresql.conf
+		place this file as /etc/logwatch/conf/logfiles/postgresql.conf
+		and adapt the path to the PostgreSQL logfile.
+
+    services_postgresql.conf
+		place this file as /etc/logwatch/conf/services/postgresql.conf
+
+    scripts_postgresql
+		place this file as /etc/logwatch/scripts/services/postgresql
+		and make it executable.
+
+You can test the logwatch output by using the following command:
+
+	/usr/sbin/logwatch --detail Med --service postgresql --range Today
+
+pgsql_logwatch is (C) 2011 by Dalibo - http://www.dalibo.com/ written by
+Gilles Darold. The code was heavily based on the mysql script by Jeremias Reith
+
