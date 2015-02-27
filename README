@@ -1,4 +1,5 @@
-NOTE: as of [Apr 17 2012][1] this has been merged into Logwatch.
+NOTE: as of [Apr 17 2012][1] this has been merged into Logwatch and
+is available in Logwatch since release 7.4.2.
 
 Logwatch configuration files and script for PostgreSQL
 
@@ -8,8 +9,6 @@ distribution; here are the files:
     logfiles_postgresql.conf
 		place this file as /etc/logwatch/conf/logfiles/postgresql.conf
 		and adapt the path to the PostgreSQL logfile.
-		
-		$> 
 
     services_postgresql.conf
 		place this file as /etc/logwatch/conf/services/postgresql.conf
@@ -28,4 +27,4 @@ You can test the logwatch output by using the following command:
 pgsql_logwatch is (C) 2011 by Dalibo - http://www.dalibo.com/ written by
 Gilles Darold. The code was heavily based on the mysql script by Jeremias Reith
 
-[1]: http://logwatch.svn.sourceforge.net/viewvc/logwatch/conf/services/postgresql.conf?revision=100&view=markup
+[1]: http://sourceforge.net/projects/logwatch/

@@ -1,19 +1,30 @@
-#!/usr/bin/perl -w
-#
+##########################################################################
 # $Id$
+##########################################################################
 #
 # Logwatch service for postgresql error log
-# To be placed in 
-#	/etc/logwatch/scripts/postgresql
 #
 # Processes all messages and summarizes them
 # Each message is given with a timestamp and RMS
 #
 ########################################################
-# (C) 2011 by Dalibo - http://www.dalibo.com/ written by
-# Gilles Darold.
+# (C) 2011 by Dalibo - http://www.dalibo.com/
+# written by Gilles Darold.
 #
 # Heavily based on the mysql script by Jeremias Reith
+########################################################
+## Covered under the included MIT/X-Consortium License:
+##    http://www.opensource.org/licenses/mit-license.php
+## All modifications and contributions by other persons to
+## this script are assumed to have been donated to the
+## Logwatch project and thus assume the above copyright
+## and licensing terms.  If you want to make contributions
+## under your own copyright or a different license this
+## must be explicitly stated in the contribution and the
+## Logwatch project reserves the right to not accept such
+## contributions.  If you have made significant
+## contributions to this script and want to claim
+## copyright please contact logwatch-devel@lists.sourceforge.net.
 ########################################################
 
 use strict;
@@ -63,7 +74,7 @@ while(<>) {
     next unless $line =~ /^($filter1|$filter2)/o;
     my $datetime = $1;
     my $time = '';
-    # Date/timle format differ following the log_destination (stderr or syslog)
+    # Date/time format differ following the log_destination (stderr or syslog)
     if ($datetime =~ /(\d{4})-(\d{2})-(\d{2})\s+(\d+):(\d+):(\d+)/) {
 	    {
 		# timelocal is quite chatty
